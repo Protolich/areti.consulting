@@ -10,13 +10,16 @@
 .logo-face {
   color: #FFF;
   font-family: $font-header;
-  font-size: 50px;
+  font-size: em(80);
+  line-height: 1.2;
+  text-align: center;
 
   span {
     animation-name: fadein;
     animation-duration: 1s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
+    opacity: 0;
 
     &:nth-child(1) {
       animation-delay: 0s;
@@ -35,6 +38,8 @@
     }
     &:nth-child(6) {
       animation-delay: 2.5s;
+      font-size: 0.75em;
+      display: block;
     }
   }
 }
