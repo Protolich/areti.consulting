@@ -959,7 +959,9 @@ header {
 
 footer {
   border-top: 1px solid #333;
-  padding: 10px;
+  font-size: 0.76923em;
+  padding: 2em;
+  margin-top: 20px;
   text-align: center; }
 
 .content * {
