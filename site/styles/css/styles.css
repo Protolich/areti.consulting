@@ -970,40 +970,33 @@ footer {
     margin-top: 20px; }
 
 .nav-head {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
+  text-align: right;
   width: 100%; }
   @media (min-width: 768px) {
     .nav-head {
       flex-direction: row; } }
+  .nav-head ul {
+    line-height: 53px; }
+  .nav-head li {
+    display: inline-block;
+    line-height: 1; }
   .nav-head a {
     color: #FFF;
     display: block;
     font-size: 0.92308em;
     padding: 10px;
     width: 100%; }
+    @media (min-width: 768px) {
+      .nav-head a {
+        padding-top: 0;
+        padding-bottom: 0;
+        width: auto; } }
     .nav-head a + a {
       border-top: 1px solid #FFF; }
       @media (min-width: 768px) {
         .nav-head a + a {
           border-top: none; } }
-    @media (min-width: 768px) {
-      .nav-head a {
-        margin-left: 20px;
-        margin-right: 20px;
-        width: auto; } }
-    @media (min-width: 768px) {
-      .nav-head a:nth-child(1) {
-        order: 2; } }
-    @media (min-width: 768px) {
-      .nav-head a:nth-child(2) {
-        order: 1; } }
-    @media (min-width: 768px) {
-      .nav-head a:nth-child(3) {
-        order: 3; } }
   .nav-head .root {
     font-family: "Cinzel Decorative", serif;
-    font-size: 2.46154em; }
+    font-size: 2.46154em;
+    float: left; }

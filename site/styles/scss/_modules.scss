@@ -83,15 +83,20 @@ footer {
 }
 
 .nav-head {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
+  text-align: right;
   width: 100%;
 
   @include min(768px) {
     flex-direction: row;
+  }
+
+  ul {
+    line-height: 53px;
+  }
+
+  li {
+    display: inline-block;
+    line-height: 1;
   }
 
   a {
@@ -101,6 +106,12 @@ footer {
     padding: 10px;
     width: 100%;
 
+    @include min(768px) {
+      padding-top: 0;
+      padding-bottom: 0;
+      width: auto;
+    }
+
     + a {
       border-top: 1px solid #FFF;
 
@@ -108,32 +119,11 @@ footer {
         border-top: none;
       }
     }
-
-    @include min(768px) {
-      margin-left: 20px;
-      margin-right: 20px;
-      width: auto;
-    }
-
-    &:nth-child(1) {
-      @include min(768px) {
-        order: 2;
-      }
-    }
-    &:nth-child(2) {
-      @include min(768px) {
-        order: 1;
-      }
-    }
-    &:nth-child(3) {
-      @include min(768px) {
-        order: 3;
-      }
-    }
   }
 
   .root {
     font-family: $font-header;
     font-size: em(32);
+    float: left;
   }
 }
