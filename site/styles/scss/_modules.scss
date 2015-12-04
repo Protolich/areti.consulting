@@ -17,6 +17,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 .logo-face {
   color: #FFF;
@@ -129,7 +130,9 @@ footer {
 }
 
 .nav-home {
+  border-top: 1px solid #FFF;
   margin-top: 20px;
+  padding: 20px 10px 0;
   text-align: center;
 
   li {
