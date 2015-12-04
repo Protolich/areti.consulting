@@ -1000,3 +1000,14 @@ footer {
     font-family: "Cinzel Decorative", serif;
     font-size: 2.46154em;
     float: left; }
+
+.nav-home {
+  margin-top: 20px;
+  text-align: center; }
+  .nav-home li {
+    display: inline-block; }
+  .nav-home a {
+    color: #FFF;
+    font-size: 1.23077em;
+    padding-left: 20px;
+    padding-right: 20px; }

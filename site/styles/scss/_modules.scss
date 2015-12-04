@@ -127,3 +127,19 @@ footer {
     float: left;
   }
 }
+
+.nav-home {
+  margin-top: 20px;
+  text-align: center;
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    color: #FFF;
+    font-size: em(16);
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
