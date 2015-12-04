@@ -83,6 +83,14 @@ footer {
   }
 }
 
+nav {
+  .active {
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
 .nav-head {
   text-align: right;
   width: 100%;
