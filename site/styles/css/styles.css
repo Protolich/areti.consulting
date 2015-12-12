@@ -906,6 +906,23 @@ a {
   100% {
     opacity: 1; } }
 
+img {
+  display: inline-block;
+  height: auto;
+  max-width: 100%; }
+  .oldie img {
+    max-width: none; }
+  img.right {
+    float: right;
+    margin: 0 0 16px 16px; }
+  img.left {
+    float: left;
+    margin: 0 16px 16px 0; }
+  img[style*="left"] {
+    margin: 0 16px 16px 0; }
+  img[style*="right"] {
+    margin: 0 0 16px 16px; }
+
 .wrap {
   max-width: 1000px;
   margin-left: 5%;

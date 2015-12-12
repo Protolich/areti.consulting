@@ -1,3 +1,28 @@
+img {
+	display: inline-block;
+	height: auto;
+	max-width: 100%;
+
+	.oldie & { max-width: none; }
+
+	&.right {
+		float: right;
+		margin: 0 0 16px 16px;
+	}
+	&.left {
+		float: left;
+		margin: 0 16px 16px 0;
+	}
+
+	&[style*="left"] {
+		margin: 0 16px 16px 0;
+	}
+	&[style*="right"] {
+		margin: 0 0 16px 16px;
+	}
+}
+
+
 .wrap {
   max-width: 1000px;
   margin-left: 5%;
