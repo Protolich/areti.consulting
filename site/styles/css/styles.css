@@ -999,6 +999,8 @@ nav .active a {
   .nav-head ul {
     line-height: 53px; }
     .nav-head ul ul {
+      background-color: #333;
+      padding: 5px;
       left: -9999px;
       position: absolute; }
   .nav-head li {
