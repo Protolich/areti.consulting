@@ -126,11 +126,22 @@ nav {
 
   ul {
     line-height: 53px;
+
+    ul {
+      left: -9999px;
+      position: absolute;
+    }
   }
 
   li {
     display: inline-block;
     line-height: 1;
+
+    &:hover {
+      > ul {
+        left: auto;
+      }
+    }
   }
 
   a {

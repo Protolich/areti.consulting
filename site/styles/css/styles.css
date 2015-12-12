@@ -998,9 +998,14 @@ nav .active a {
       flex-direction: row; } }
   .nav-head ul {
     line-height: 53px; }
+    .nav-head ul ul {
+      left: -9999px;
+      position: absolute; }
   .nav-head li {
     display: inline-block;
     line-height: 1; }
+    .nav-head li:hover > ul {
+      left: auto; }
   .nav-head a {
     color: #FFF;
     display: block;
