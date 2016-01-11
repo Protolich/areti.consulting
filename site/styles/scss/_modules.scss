@@ -35,7 +35,7 @@ img {
 }
 
 .panel {
-  background-color: #333;
+  background-color: $colour-highlight;
   height: 100vh;
   width: 100vw;
   max-width: 100%;
@@ -82,7 +82,7 @@ img {
 }
 
 header {
-  background-color: #333;
+  background-color: $colour-highlight;
   padding: 16px;
 
   + * {
