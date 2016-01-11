@@ -60,104 +60,9 @@ Examples:
 `lh(18, 12)` // 1.5
 */
 /*
-### fluid($columns: 1, $total-columns: $columns)
-
-Will provide the % result of the first value divided by the second.
-Suitable for working out columns and general % values.
-
-Examples:
-`fluid(2, 6)` // 12.5%
-`fluid(10px, 960px)` // 1.041666666666667%
-*/
-/*
 ## Mixins
 
 Mixins must to be called using @include (scss) or + (sass)
-
-### vendor($property, $value)
-
-Add vendor prefixes to a property and provide the value for the property
-
-`@include vendor(box-shadow, 0 0 10px 0 #000);`
-
-Outputs:
-`-webkit-box-shadow: 0 0 10px 0 #000`
-`-moz-box-shadow: 0 0 10px 0 #000`
-`-ms-box-shadow: 0 0 10px 0 #000`
-`-o-box-shadow: 0 0 10px 0 #000`
-`box-shadow: 0 0 10px 0 #000`
-*/
-/*
-### list-reset
-
-Resets current list only
-
-<pre>
-ul {
-	@include list-reset;
-}
-</pre>
-
-Outputs:
-<pre>
-ul {
-	margin: 0;
-	padding: 0;
-}
-ul > li {
-	list-style: none;
-	list-style-image: none;
-}
-</pre>
-*/
-/*
-### list-reset-full
-
-Reset current and all child lists
-
-<pre>
-ul {
-	@include list-reset-full;
-}
-</pre>
-
-Outputs:
-<pre>
-ul, ul ul, ul ol {
-	margin: 0;
-	padding: 0;
-}
-ul li {
-	list-style: none;
-	list-style-image: none;
-}
-
-</pre>
-*/
-/*
-### clearfix
-
-Clear an elements floated children
-
-<pre>
-div {
-	@include clearfix;
-}
-</pre>
-
-Outputs:
-<pre>
-div {
-	*zoom: 1;
-}
-div:before, div:after {
-	content: "";
-	display: table;
-}
-div:after {
-	clear: both;
-}
-</pre>
 */
 /*
 ### keyframes($name)
@@ -196,25 +101,6 @@ Outputs:
 	  0%   { opacity: 0; }
 	  100% { opacity: 1; }
 	}
-}
-</pre>
-*/
-/*
-### hidden-full
-
-Completely hide an element
-
-<pre>
-div {
-	@include hidden-full;
-}
-</pre>
-
-Outputs:
-<pre>
-div {
-	display: none !important;
-	visibility: hidden;
 }
 </pre>
 */
@@ -293,162 +179,7 @@ Outputs:
 </pre>
 */
 /*
-### generate($width: 10px, $height: 10px, $position: static)
-
-Create generic styling for :before/:after
-
-$height / $width / $position all control their namesake CSS properties
-
-<pre>
-div:after {
-	@include generate;
-}
-</pre>
-
-Outputs:
-<pre>
-div:after {
-	content: "";
-	overflow: hidden;
-	text-indent: -9999em;
-	display: block;
-	width: 10px;
-	height: 10px;
-	position: static;
-}
-</pre>
-*/
-/*
-### opacity($o: 0.5)
-
-Handle standard & IE opacity
-
-<pre>
-div {
-	@include opacity(.75);
-}
-</pre>
-
-Outputs:
-<pre>
-div {
-	opacity: .75;
-	filter: alpha(opacity=75);
-}
-</pre>
-*/
-/*
-### border-radius($val: 10px)
-
-Friendly interface to vendor(border-radius)
-*/
-/*
-### box-shadow($val: 0 0 10px #000)
-
-Friendly interface to vendor(box-shadow)
-Allows multiple comma separated values.
-*/
-/*
-### gradient($direction:vertical, $start-color: #fff, $start-position: 0%, $end-color: #000, $end-position: 100%)
-
-Create horizontal / vertical gradients
-
-Note : Does not include IE9 data uri support
-
-<pre>
-div {
-	@include gradient($start-color: #F00, $end-color: #0F0);
-}
-</pre>
-
-Outputs:
-<pre>
-div {
-	background-image: -moz-linear-gradient(top, #F00 0%, #0F0 100%);
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #F00), color-stop(100%, #0F0));
-	background-image: -webkit-linear-gradient(top, #F00 0%, #0F0 100%);
-	background-image: -o-linear-gradient(top, #F00 0%, #0F0 100%);
-	background-image: -ms-linear-gradient(top, #F00 0%, #0F0 100%);
-	background-image: linear-gradient(to bottom, #F00 0%, #0F0 100%);
-	background-repeat: repeat-y;
-}
-</pre>
-*/
-/*
-### transform($arguments)
-
-Friendly interface to vendor(transform) w/backface-visibility: hidden
-*/
-/*
-### transition($arguments)
-
-Friendly interface to vendor(transition)
-*/
-/*
-### perspective($val: 0)
-
-Friendly interface to vendor(perspective)
-*/
-/*
-### perspective-origin($val: 50% 50%)
-
-Friendly interface to vendor(perspective-origin)
-*/
-/*
-### transform-origin($val: 50% 50%)
-
-Friendly interface to vendor(transform-origin)
-*/
-/*
-### transform-style($val: preserve-3d)
-
-Friendly interface to vendor(transform-style)
-*/
-/*
 ### Placeholders
-*/
-/*
-### boxes($cols: 3, $gutter: 10px, $selector: ".col")
-
-Set the container and its children (as  selected by the selector argument) to be a set of columns.
-*/
-/*
-## Extend
-
-Use these placeholder styles with @extend.
-
-### %debug
-
-Used to highlight items via background-color.
-Can be useful for debugging.
-*/
-/*
-### %ellipsis
-
-If the element has overflowing text the text will be truncated and an ellipsis appended to the end.
-*/
-/*
-### %ir
-
-Use when setting an element such as an input button to use a background-image.
-
-Not recommended to use this method unless necessary.
-Try and use appropriate elements where possible (`<input type="image" />` for example).
-*/
-/*
-### %clearfix
-
-@extend interface for @include clearfix;
-*/
-/*
-### %list-reset
-
-@extend interface for @include list-reset;
-*/
-/*
-### %list-reset-full
-
-@extend interface for @include list-reset-full;
 */
 /*
 # Normalize (_normalize)
@@ -459,17 +190,9 @@ Global reset. This file should not be edited.
 
 */
 html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -o-box-sizing: border-box;
   box-sizing: border-box; }
 
 *, *:after, *:before {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
-  -ms-box-sizing: inherit;
-  -o-box-sizing: inherit;
   box-sizing: inherit;
   background-repeat: no-repeat; }
 

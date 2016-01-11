@@ -8,11 +8,11 @@ Global reset. This file should not be edited.
 */
 
 html {
-	@include vendor(box-sizing, border-box);
+	box-sizing: border-box;
 }
 
 *, *:after, *:before {
-	@include vendor(box-sizing, inherit);
+	box-sizing: inherit;
 	background-repeat: no-repeat;
 }
 
